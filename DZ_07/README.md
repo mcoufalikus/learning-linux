@@ -40,29 +40,36 @@ Adding boot menu entry for UEFI Firmware Settings ...
 done
 root@nfsc:~# reboot
 ```
-![[Screenshot_20261104_122037.png]]
+
+
 меню grub теперь появляется при загрузке.
+<img src="https://github.com/mcoufalikus/learning-linux/blob/main/DZ_07/Screenshot_20261104_122037.png?raw=true" />
 
 2:
 
 жмем Е при выборе ядра в груб, добавляем init=/bin/bash и нажимаем сtrl-x:
-![[Screenshot_20261104_122323.png]]
+
+<img src="https://github.com/mcoufalikus/learning-linux/blob/main/DZ_07/Screenshot_20261104_122232.png?raw=true" />
 
 после запуска bash пока еще ничего менять нельзя, надо перемонтировать корень в RW:
-![[Screenshot_20261104_122716.png]]
+<img src="https://github.com/mcoufalikus/learning-linux/blob/main/DZ_07/Screenshot_20261104_122716.png?raw=true" />
 
 переход в рекавери
-![[Screenshot_20261104_124008.png]]
+<img src="https://github.com/mcoufalikus/learning-linux/blob/main/DZ_07/Screenshot_20261104_124008.png?raw=true" />
+
 в первом способе я задал пароль рута (не зная его заранее), теперь захожу с ним в рекавери:
-![[Screenshot_20261104_131449.png]]
+<img src="https://github.com/mcoufalikus/learning-linux/blob/main/DZ_07/Screenshot_20261104_131449.png?raw=true" />
+
 
 3:
 переименовать VG, восстановить загрузку.
 поменял имя VG, на всякий случай проверил fstab но там уже все по uuid-ам:
-![[Screenshot_20261104_140105.png]]
+<img src="https://github.com/mcoufalikus/learning-linux/blob/main/DZ_07/Screenshot_20261104_140105.png?raw=true" />
+
 
 правлю grub.cfg:
-![[Screenshot_20261104_140502.png]]
+<img src="https://github.com/mcoufalikus/learning-linux/blob/main/DZ_07/Screenshot_20261104_140502.png?raw=true" />
+
 
 после ребута все нормально:
-![[Screenshot_20261104_141051.png]]
+<img src="https://github.com/mcoufalikus/learning-linux/blob/main/DZ_07/Screenshot_20261104_141051.png?raw=true" />
